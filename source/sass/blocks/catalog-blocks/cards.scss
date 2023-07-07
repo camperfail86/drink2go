@@ -1,0 +1,142 @@
+.cards__name {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  display: block;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+}
+
+.cards__select {
+  margin-bottom: 20px;
+  align-self: center;
+  border: none;
+  background-color: $background-gray;
+  font-size: 16px;
+  line-height: 24px;
+  color: $base-primary;
+  font-weight: 600;
+  padding: 4px 10px;
+  height: 100%;
+
+  &:hover {
+    background-color: $base-secondary;
+    border-radius: 4px;
+  }
+}
+
+.cards__list {
+  display: grid;
+  gap: 20px;
+}
+
+.cards__item {
+  background-color: $base-white;
+  padding: 40px 20px 20px 20px;
+}
+
+.cards__img {
+  margin: 0 auto;
+  display: block;
+}
+
+.cards__sort {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  margin-top: 24px;
+  margin-bottom: 4px;
+}
+
+.cards__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.cards__down {
+  display: flex;
+  margin-top: 16px;
+}
+
+.cards__price {
+  margin: 0;
+  padding-top: 2px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  margin-right: 50px;
+}
+
+.cards__button {
+  position: relative;
+  color: $base-white;
+  height: 36px;
+  box-sizing: border-box;
+  padding: 8px 20px 8px 48px;
+  cursor: pointer;
+
+  &::after {
+    content: url("../../../img/images/union.svg");
+    position: absolute;
+    width: 20px;
+    height: 16px;
+    top: 10px;
+    left: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .cards__sort {
+    justify-content: flex-end;
+  }
+
+  .cards__name {
+    margin-right: 10px;
+  }
+
+  .cards__select {
+    margin-bottom: 30px;
+  }
+
+  .cards__list {
+    display: grid;
+    grid-template-columns: 349px 349px;
+    gap: 30px;
+  }
+
+  .cards__item {
+    padding: 40px 30px 30px;
+  }
+
+  .cards__price {
+    margin: 0 99px 0 0;
+  }
+
+  .cards__down {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .cards__list {
+    grid-template-columns: 317px 317px 317px;
+  }
+
+  .cards__button {
+    width: 141px;
+  }
+
+  .cards__price {
+    margin: 0 67px 0 0;
+  }
+}

@@ -1,0 +1,176 @@
+.catalog-buttons {
+  margin-top: 40px;
+  height: 40px;
+  display: flex;
+}
+
+.catalog-buttons__button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  box-sizing: border-box;
+  background-color: $base-white;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &:hover {
+    background-color: $primary-ligher;
+    color: $base-white;
+  }
+
+  &:hover::after {
+    color: $base-white;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+    color: $base-white;
+  }
+
+  &:active::after {
+    color: $base-white;
+  }
+
+  &:disabled {
+    background-color: $light-gray;
+  }
+}
+
+.catalog-buttons__button-prev {
+  position: relative;
+
+  &::after {
+    content: url("../../../img/images/arrow-catalog.svg");
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 13px;
+    left: 14px;
+  }
+
+  &:hover::after {
+    content: url("../../../img/images/arrow-catalog-active.svg");
+  }
+}
+
+.catalog-buttons__button-one {
+  position: relative;
+
+  &::after {
+    color: $base-primary;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    content: "1";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 8px;
+    left: 16px;
+  }
+}
+
+.catalog-buttons__button-two {
+  position: relative;
+  background-color: $background-gray;
+
+  &::after {
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    content: "2";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 8px;
+    left: 16px;
+  }
+}
+
+.catalog-buttons__button-three {
+  position: relative;
+
+  &::after {
+    color: $base-primary;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    content: "3";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 8px;
+    left: 16px;
+  }
+}
+
+.catalog-buttons__button-next {
+  position: relative;
+
+  &::after {
+    transform: rotate(180deg);
+    content: url("../../../img/images/arrow-catalog.svg");
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 17px;
+    left: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  .catalog-buttons {
+    justify-content: flex-end;
+  }
+
+  .catalog-buttons__button-prev {
+    width: 91px;
+    color: $base-primary;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    &::after {
+      content: "Назад";
+      width: 51px;
+      height: 24px;
+      top: 8px;
+      left: 20px;
+    }
+
+    &:hover::after {
+      content: "Назад";
+    }
+  }
+
+  .catalog-buttons__button-next {
+    width: 104px;
+    color: $base-primary;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    &::after {
+      transform: rotate(360deg);
+      content: "Вперед";
+      width: 64px;
+      height: 24px;
+      top: 8px;
+      left: 20px;
+    }
+  }
+}

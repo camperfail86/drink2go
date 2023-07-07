@@ -1,0 +1,181 @@
+.price__title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 22px;
+}
+
+.price__range-background {
+  background-color: $light-gray;
+  height: 2px;
+  width: 280px;
+  position: absolute;
+  top: 11px;
+}
+
+.price__text {
+  display: flex;
+  position: relative;
+}
+
+.price__input-range {
+  background-color: $primary-ligher;
+  height: 4px;
+  width: 240px;
+  position: absolute;
+  top: -1px;
+}
+
+.price__range {
+  height: 24px;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.price__input-circle--max {
+  right: -22px;
+}
+
+.price__input-circle {
+  top: -10px;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: $base-white;
+  border: 2px solid $primary-ligher;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 2px;
+
+  &:hover {
+    &::after {
+      content: "";
+      top: 2px;
+      left: 2px;
+      background: rgba(120, 89, 207, 0.25);
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+    }
+  }
+
+  &:active {
+    &::after {
+      content: "";
+      top: 2px;
+      left: 2px;
+      background: $base-primary;
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.price__input-text {
+  box-sizing: border-box;
+  width: 118px;
+  height: 38px;
+  border: 2px solid $primary-ligher;
+  border-radius: 4px;
+  position: relative;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: $base-black;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  font-style: normal;
+  text-align: center;
+
+  &:first-child {
+    margin-right: 44px;
+  }
+
+  &::placeholder {
+    font-family: "Montserrat", "Arial", sans-serif;
+    color: $base-grey;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    font-style: normal;
+    text-align: center;
+  }
+
+  &[value] {
+    font-family: "Montserrat", "Arial", sans-serif;
+    color: $base-black;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    font-style: normal;
+    text-align: center;
+  }
+
+  &:focus {
+    border: 2px solid $primary-darker;
+  }
+
+  &:disabled {
+    border: 2px solid $light-gray;
+  }
+}
+
+.price__horizontal-line {
+  position: absolute;
+  background-color: $base-grey;
+  width: 8px;
+  height: 2px;
+  top: 18px;
+  right: 136px;
+}
+
+@media (min-width: 768px) {
+  .price {
+    margin-right: 21px;
+  }
+
+  .price__input-text {
+    width: 93px;
+
+    &:first-child {
+      margin-right: 34px;
+    }
+  }
+
+  .price__horizontal-line {
+    right: 106px;
+  }
+
+  .price__range-background {
+    width: 220px;
+  }
+
+  .price__input-range {
+    width: 189px;
+  }
+
+  .price__text {
+    width: 220px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .price__range-background {
+    width: 300px;
+  }
+
+  .price__input-text {
+    width: 134px;
+  }
+
+  .price__horizontal-line {
+    right: 65px;
+  }
+
+  .price__input-range {
+    width: 260px;
+  }
+}

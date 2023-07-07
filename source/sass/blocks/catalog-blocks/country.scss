@@ -1,0 +1,53 @@
+.country__title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 24px;
+  margin-bottom: 22px;
+}
+
+.country {
+  display: flex;
+  flex-direction: column;
+}
+
+.country__text {
+  display: block;
+  position: relative;
+}
+
+.country__control {
+  content: url("../../../img/images/checkbox__default.svg");
+  position: absolute;
+  width: 42px;
+  height: 24px;
+  left: 0;
+  top: 0;
+
+  &:hover {
+    content: url("../../../img/images/checkbox__hover.svg");
+  }
+}
+
+.country__label {
+  padding-left: 52px;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 23px;
+  }
+}
+
+.country__input:checked + .country__control {
+  content: url("../../../img/images/checkbox__checked.svg");
+}
+
+.country__input:disabled + .country__control {
+  content: url("../../../img/images/checkbox__disabled.svg");
+}
+
+.country__input:disabled:checked + .country__control {
+  content: url("../../../img/images/checkbox__disabled-checked.svg");
+}
+
